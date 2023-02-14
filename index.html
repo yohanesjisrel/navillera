@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+	<title>Hai Valien!</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
+		box-sizing: border-box;
+		outline: none;
+	}
+
+	body{
+		background: #fff;
+		overflow-x: hidden;
+	}
+
+
+	.boxGaleri{
+		width: 100%;
+		height: 100vh;
+	}
+
+
+	.galeri{
+		width: 100%;
+		height: 100%;
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	h2{
+		font-size: 5vw;
+		color: #fff;
+	}
+
+
+	.galeri1{
+		background-image: url('galeri1.jpg');
+	}
+
+	.galeri2{
+		background-image: url('galeri1.jpg');
+	}
+
+
+
+	.fa-heart{
+		color: red;
+	}
+
+	.hitam{
+		color: #000;
+	}
+
+	#fixedbutton {
+		position: fixed;
+		bottom: 5%;
+		right: 5%;
+	}
+
+	</style>
+</head>
+<body>
+	<div class="boxGaleri">
+		<div class="galeri galeri1">
+			<p style="text-shadow: 0 0 0px black, 0 0 0px black, 0 0 0px black, 0 0 0px black; text-align: center; font-size: xx-large; font-family: 'Courier New', Courier, monospace;"> Happy Valentine's Day, Valien! <br> Scroll ke bawah dulu, yuk!</span></p>
+		</div>
+
+		<div class="galeri galeri1">
+			<div class="soundcloud">
+				<iframe width="300px" height="300px" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1446576505&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/yohanes-jisrel" title="Yohanes Jisrel" target="_blank" style="color: #cccccc; text-decoration: none;">Yohanes Jisrel</a> · <a href="https://soundcloud.com/yohanes-jisrel/navillera" title="NAVILLERA" target="_blank" style="color: #cccccc; text-decoration: none;">NAVILLERA</a></div>
+			</div>
+			<div>
+				<button type="button" class="btn btn-danger" onclick="Swal()" id="fixedbutton">Click Me!</button>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+	<script type="text/javascript">
+
+	gsap.to('.fa-heart', {
+		scale:1.2,
+		repeat:-1,
+		opacity:1,
+		yoyo:true,
+		duration:.3
+	})
+	
+	function Swal() {
+		swal("Hai Valiensia! Mau dipanggil apa??", {
+	  	content: "input",
+		})
+		.then((value) => {
+			swal(`Hai ${value} `, "First of all, I want to say Happy Valentine's Day")
+			.then((value) => {
+				swal(`This probably sounds kinda weird...`)
+				.then(() => {
+					swal("As you have already listened from the song I made for you")
+					.then(() => {
+						swal(`I'm in love with you!`)
+						.then(() => {
+							swal(`I know this might be too early to start a relationship`)
+							.then(() => {
+								swal(`That's why I want to confess to you before`)
+								.then(() => {
+									swal(`I know you would probably be laughing right now, but please know that I mean what I said.`)
+									.then(() => {
+										swal("So, would you give me a chance?", {
+											buttons: {
+												cancel: "Yes",
+												catch: {
+													text: "YesYes",
+													value: "catch",
+												},
+												defeat: false,
+											}
+										})
+										.then((value) => {
+											switch (value) {
+												case "catch":
+													swal("Hehehehe :D")
+													.then(()=>{
+														swal("Once again Happy Valentine's Day!")
+														.then(()=>{
+															swal("Have a wonderful and lovely day!")
+														})
+													})
+											}
+										})
+									})
+								})
+							})
+						})
+					})
+				})
+			})
+		});
+	}
+
+	
+	</script>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+
+</body>
+</html>
